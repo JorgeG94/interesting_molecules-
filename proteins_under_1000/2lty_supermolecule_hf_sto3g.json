@@ -1,0 +1,14 @@
+{
+    "schema": {"name": "mqc-frag", "version": "1.0"},
+    "molecules": [
+        {
+            "xyz": "2lty_protein.xyz",
+            "molecular_charge": 3,
+            "molecular_multiplicity": 1
+        }
+    ],
+    "model": {"method": "hf", "basis": "sto-3g"},
+    "keywords": {"scf": {"maxiter": 300, "tolerance": 1e-8}},
+    "system": {"logger": {"level": "info"}},
+    "driver": "Energy"
+}
