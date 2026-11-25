@@ -1,0 +1,73 @@
+{
+  "schema": {
+    "name": "w3_ring_aVQZ_ri-ccsdt_ssfc",
+    "version": "1.0"
+  },
+  "molecules": [
+    {
+      "xyz": "../../w3_ring_aVQZ.xyz",
+      "molecular_charge": 0,
+      "molecular_multiplicity": 1,
+      "fragments": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "fragment_charges": [
+        0,
+        0,
+        0
+      ],
+      "fragment_multiplicities": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "model": {
+    "method": "ri-ccsd(t)",
+    "basis": "aug-cc-pvqz",
+    "aux_basis": "aug-cc-pvqz-rifit"
+  },
+  "backend": "terco",
+  "keywords": {
+    "scf": {
+      "maxiter": 200,
+      "tolerance": 1e-10,
+      "guess": "sad",
+      "density_fitting": true
+    },
+    "correlation": {
+      "freeze_core": true
+    },
+    "cc": {
+      "tolerance": 1e-09,
+      "maxiter": 100
+    },
+    "fragmentation": {
+      "method": "mbe",
+      "level": 3,
+      "embedding": "none",
+      "counterpoise": "ssfc"
+    }
+  },
+  "system": {
+    "logger": {
+      "level": "Verbose"
+    }
+  },
+  "driver": "Energy"
+}

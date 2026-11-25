@@ -1,0 +1,40 @@
+{
+  "schema": {
+    "name": "w20_dodec_aVDZ_ri-ccsdt_full",
+    "version": "1.0"
+  },
+  "molecules": [
+    {
+      "xyz": "../../w20_dodec_aVDZ.xyz",
+      "molecular_charge": 0,
+      "molecular_multiplicity": 1
+    }
+  ],
+  "model": {
+    "method": "ri-ccsd(t)",
+    "basis": "aug-cc-pvdz",
+    "aux_basis": "aug-cc-pvdz-rifit"
+  },
+  "backend": "terco",
+  "keywords": {
+    "scf": {
+      "maxiter": 200,
+      "tolerance": 1e-10,
+      "guess": "sad",
+      "density_fitting": true
+    },
+    "correlation": {
+      "freeze_core": true
+    },
+    "cc": {
+      "tolerance": 1e-09,
+      "maxiter": 100
+    }
+  },
+  "system": {
+    "logger": {
+      "level": "Verbose"
+    }
+  },
+  "driver": "Energy"
+}

@@ -17235,19 +17235,19 @@
     }
   ],
   "model": {
-    "method": "XTB-GFN2",
-    "basis": "def2-svp",
-    "aux_basis": "def2-universal-jkfit"
+    "method": "RI-MP2",
+    "basis": "cc-pvdz",
+    "aux_basis": "cc-pvdz-rifit"
   },
   "keywords": {
     "scf": {
       "maxiter": 50,
+      "density_fitting": true,
       "tolerance": 1e-06
     },
     "fragmentation": {
       "method": "MBE",
       "level": 2,
-      "allow_overlapping_fragments": false,
       "embedding": "none",
       "cutoff_method": "distance",
       "distance_metric": "min",
@@ -17258,7 +17258,7 @@
   },
   "system": {
     "logger": {
-      "level": "Info"
+      "level": "Verbose"
     }
   },
   "driver": "Energy"
